@@ -108,8 +108,32 @@ return {
                     ),
                 },
             },
+            setup = {
+                ---@diagnostic disable-next-line: unused-local
+                gopls = function(_, opts)
+                    -- workaround for gopls not supporting semanticTokensProvider
+                    -- https://github.com/golang/go/issues/54531#issuecomment-1464982242
+                    LazyVim.lsp.on_attach(function(client, _)
+                        if not client.server_capabilities.semanticTokensProvider then
+                            local semantic = client.config.capabilities.textDocument.semanticTokens
+                            client.server_capabilities.semanticTokensProvider = {
+                                full = true,
+                                legend = {
+                                    ---@diagnostic disable-next-line: need-check-nil
+                                    tokenTypes = semantic.tokenTypes,
+                                    ---@diagnostic disable-next-line: need-check-nil
+                                    tokenModifiers = semantic.tokenModifiers,
+                                },
+                                range = true,
+                            }
+                        end
+                    end, "gopls")
+                    -- end workaround
+                end,
+            },
         },
     },
+
     -- {
     --     "nvimtools/none-ls.nvim", -- none-ls is an active community fork of null-ls
     --     opts = function(_, opts)
