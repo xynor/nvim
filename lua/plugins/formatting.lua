@@ -27,6 +27,9 @@ return {
                     args = { "fmt", "$FILENAME" },
                     stdin = false,
                 },
+                prettier = {
+                    command = vim.fn.expand("~/.local/share/nvim/mason/bin/prettier"),
+                },
             },
 
             -- format_on_save = {
