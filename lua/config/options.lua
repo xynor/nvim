@@ -5,3 +5,4 @@ local opt = vim.opt
 opt.tabstop = 4
 opt.shiftwidth = 4
 vim.g.root_spec = { "cwd" }
+vim.g.lazyvim_picker = "telescope"
