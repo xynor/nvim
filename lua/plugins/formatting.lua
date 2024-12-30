@@ -20,6 +20,8 @@ return {
                 toml = { "taplo" },
                 go = { "goimports", "gofumpt" },
                 -- python = { "isort", "black" },
+                sh = { "shfmt" },
+                zsh = { "shfmt" },
             },
             formatters = {
                 forge = {

@@ -125,6 +125,9 @@ return {
                         "hardhat.config.js"
                     ),
                 },
+                bashls = {
+                    filetypes = { "sh" },
+                },
             },
             setup = {
                 ---@diagnostic disable-next-line: unused-local
