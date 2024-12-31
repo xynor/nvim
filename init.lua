@@ -7,7 +7,7 @@ if vim.g.neovide then
         vim.keymap.set("i", "<D-v>", '<ESC>l"+Pli') -- Paste insert mode
         vim.api.nvim_set_keymap("!", "<D-v>", "<C-R>+", { noremap = true, silent = true })
     else
-        vim.o.guifont = "Hack Nerd Font:h14"
+        vim.o.guifont = "Hack Nerd Font:h13"
         vim.keymap.set("i", "<M-v>", '<ESC>l"+Pli') -- Paste insert mode
         vim.api.nvim_set_keymap("!", "<M-v>", "<C-R>+", { noremap = true, silent = true })
     end
