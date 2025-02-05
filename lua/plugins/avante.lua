@@ -20,6 +20,11 @@ return {
                 api_key_name = "GROQ_API_KEY", -- default OPENAI_API_KEY if not set
             },
             windows = { width = 50 },
+            mappings = {
+                submit = {
+                    insert = "<C-CR>",
+                },
+            },
         },
         -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
         build = "make",
