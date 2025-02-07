@@ -19,7 +19,15 @@ return {
                 -- api_key_name = "OPENAI_API_KEY", -- default OPENAI_API_KEY if not set
                 api_key_name = "GROQ_API_KEY", -- default OPENAI_API_KEY if not set
             },
-            windows = { width = 50 },
+            windows = {
+                width = 50,
+                -- edit = {
+                --     start_insert = false, -- Start insert mode when opening the edit window
+                -- },
+                -- ask = {
+                --     start_insert = false, -- Start insert mode when opening the ask window
+                -- },
+            },
             mappings = {
                 submit = {
                     insert = "<C-CR>",
