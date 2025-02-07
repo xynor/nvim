@@ -4,5 +4,7 @@
 local opt = vim.opt
 opt.tabstop = 4
 opt.shiftwidth = 4
+-- views can only be fully collapsed with the global statusline
+opt.laststatus = 3
 vim.g.root_spec = { "cwd" }
 vim.g.lazyvim_picker = "telescope"

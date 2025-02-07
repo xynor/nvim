@@ -33,6 +33,9 @@ return {
                     insert = "<C-CR>",
                 },
             },
+            web_search_engine = {
+                provider = "tavily", -- tavily or serpapi
+            },
         },
         -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
         build = "make",
