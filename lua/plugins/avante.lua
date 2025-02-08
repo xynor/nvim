@@ -12,10 +12,12 @@ return {
                 -- model = "deepseek-chat",
                 -- endpoint = "https://api.groq.com/openai/v1",
                 endpoint = "https://openapi.monica.im/v1",
-                model = "claude-3-5-sonnet-20241022",
-                timeout = 30000, -- Timeout in milliseconds
+                -- model = "claude-3-5-sonnet-20241022",
+                model = "gpt-4o-mini",
+                timeout = 60000, -- Timeout in milliseconds
                 temperature = 0,
-                max_tokens = 4096,
+                -- max_tokens = 4096,
+                max_tokens = 16384,
                 -- optional
                 api_key_name = "OPENAI_API_KEY", -- default OPENAI_API_KEY if not set
             },
