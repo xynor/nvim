@@ -124,6 +124,11 @@ return {
                         "hardhat.config.ts",
                         "hardhat.config.js"
                     ),
+                    capabilities = {
+                        textDocument = {
+                            publishDiagnostics = false,
+                        },
+                    },
                 },
                 bashls = {
                     filetypes = { "sh" },

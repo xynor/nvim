@@ -5,7 +5,7 @@ return {
         lazy = false,
         version = false, -- set this if you want to always pull the latest change
         opts = {
-            provider = "openai",
+            provider = "groq",
             auto_suggestions_provider = "openai", -- Since auto-suggestions are a high-frequency operation and therefore expensive, it is recommended to specify an inexpensive provider or even a free provider: copilot
             openai = {
                 -- endpoint = "https://api.deepseek.com/v1",
@@ -21,6 +21,17 @@ return {
                 -- optional
                 api_key_name = "OPENAI_API_KEY", -- default OPENAI_API_KEY if not set
             },
+            vendors = {
+                groq = {
+                    __inherited_from = "openai",
+                    api_key_name = "GROQ_API_KEY",
+                    endpoint = "https://api.groq.com/openai/v1",
+                    model = "deepseek-r1-distill-llama-70b",
+                    timeout = 60000, -- Timeout in milliseconds
+                    temperature = 0,
+                    max_tokens = 4096,
+                },
+            },
             windows = {
                 width = 50,
                 -- edit = {
@@ -30,13 +41,22 @@ return {
                 --     start_insert = false, -- Start insert mode when opening the ask window
                 -- },
             },
+            behaviour = {
+                auto_suggestions = false, -- Experimental stage
+                auto_set_highlight_group = true,
+                auto_set_keymaps = true,
+                auto_apply_diff_after_generation = false,
+                support_paste_from_clipboard = true,
+                minimize_diff = true, -- Whether to remove unchanged lines when applying a code block
+                enable_token_counting = true, -- Whether to enable token counting. Default to true.
+            },
             mappings = {
                 submit = {
                     insert = "<C-CR>",
                 },
             },
             web_search_engine = {
-                provider = "tavily", -- tavily or serpapi
+                provider = "serpapi", -- tavily or serpapi
             },
         },
         -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
