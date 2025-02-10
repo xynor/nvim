@@ -124,10 +124,12 @@ return {
                         "hardhat.config.ts",
                         "hardhat.config.js"
                     ),
-                    capabilities = {
-                        textDocument = {
-                            publishDiagnostics = false,
-                        },
+                    handlers = {
+                        ["textDocument/publishDiagnostics"] = function() end,
+                    },
+                    diagnostics = {
+                        virtual_text = false,
+                        signs = false,
                     },
                 },
                 bashls = {
