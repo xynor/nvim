@@ -124,12 +124,10 @@ return {
                         "hardhat.config.ts",
                         "hardhat.config.js"
                     ),
-                    handlers = {
-                        ["textDocument/publishDiagnostics"] = function() end,
-                    },
-                    diagnostics = {
-                        virtual_text = false,
-                        signs = false,
+                    settings = {
+                        solidity = {
+                            enabledAsYouTypeCompilationErrorCheck = false,
+                        },
                     },
                 },
                 bashls = {
