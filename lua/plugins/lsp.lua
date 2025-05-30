@@ -126,7 +126,8 @@ return {
                     ),
                     settings = {
                         solidity = {
-                            enabledAsYouTypeCompilationErrorCheck = false,
+                            monoRepoSupport = false,
+                            defaultCompiler = "embedded",
                         },
                     },
                 },
