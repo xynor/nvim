@@ -1,0 +1,45 @@
+{
+    "editor.formatOnSave": true,
+    "editor.inlayHints.enabled": "off",
+    "http.proxy": "http://127.0.0.1:8889",
+    "[solidity]": {
+        "editor.defaultFormatter": "JuanBlanco.solidity",
+        //NomicFoundation.hardhat-solidity
+    },
+    "solidity.formatter": "forge",
+    "solidity.linter": "solhint",
+    "solidity.monoRepoSupport": false,
+    "solidity.defaultCompiler": "embedded",
+    "go.addTags": {
+        "promptForTags": true,
+        "transform": "camelcase"
+    },
+    "go.testFlags": [
+        "-v",
+        "-count=1",
+    ],
+    "go.testTimeout": "30m",
+    // "go.testEnvVars": {
+    //     "CGO_ENABLED": "1",
+    // },
+    "go.removeTags": {
+        "promptForTags": true
+    },
+    "go.lintTool": "golangci-lint",
+    // "go.lintFlags": [
+    //     "-D",
+    //     "ineffassign"
+    // ],
+    "go.lintOnSave": "workspace",
+    "gopls": {
+        "ui.navigation.importShortcut": "Definition",
+        "ui.semanticTokens": true,
+        "ui.diagnostic.analyses": {
+            "shadow": false
+        }
+    },
+    "editor.fontSize": 15,
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+}
