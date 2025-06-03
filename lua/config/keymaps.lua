@@ -9,6 +9,7 @@ if vim.g.vscode then
     map("n", "]d", "<cmd>lua require('vscode').action('editor.action.marker.nextInFiles')<CR>")
     map("n", "[d", "<cmd>lua require('vscode').action('editor.action.marker.prevInFiles')<CR>")
     map("n", "<leader>ca", "<cmd>lua require('vscode').action('editor.action.quickFix')<CR>")
+    map("n", "<leader>cr", "<cmd>lua require('vscode').action('editor.action.rename')<CR>")
     map("n", "<leader>e", function()
         -- vscode.action("workbench.view.explorer")
         vscode.action("workbench.action.toggleSidebarVisibility")
