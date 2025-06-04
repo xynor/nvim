@@ -7,6 +7,7 @@
         //NomicFoundation.hardhat-solidity
     },
     "solidity.formatter": "forge",
+    //need run solhint --init on workspace
     "solidity.linter": "solhint",
     "solidity.monoRepoSupport": false,
     "solidity.defaultCompiler": "embedded",
